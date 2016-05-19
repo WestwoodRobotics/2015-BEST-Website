@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="/img/logo.png" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/js/reveal.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/reveal.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/theme/black.min.css" />
+		<style>
+		.hidden
+		{
+			display:none;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var images = ["0.png","1.png","10.jpg","11.jpg","12.jpg","13.png","14.png","15.png","16.jpg","17.jpg","18.jpg","19.png","2.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","3.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.png","4.jpg","40.jpg","5.jpg","6.jpg","9.jpg"];
+			var created = []
+			$.each(images,function()
+			{
+				var random = Math.floor(Math.random() * images.length-1)+1;
+				var selected = false
+				while(!selected)
+				{
+					if(jQuery.inArray(random,created) != -1)
+						random = Math.floor(Math.random() * images.length-1)+1;
+					else
+					{
+						$("<section></section>",{class:"img","data-background":"img/gallery/"+images[random-1]}).appendTo($($(".slides")[0]));
+						created.push(random);
+						selected = true;
+					}
+				}
+			});
+			Reveal.initialize({controls:true, progress:false, embedded:true, autoSlide:5000, loop: true, autoSlideStoppable:true});
+		</script>
+	</body>
+</html>
