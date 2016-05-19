@@ -181,7 +181,7 @@ ul li
 }
 table
 {
-	font-size:90%;
+	font-size:95%;
 	margin:0;
 }
 #external-calculator
@@ -191,4 +191,8 @@ table
 	margin:0;
 	margin-top:5px;
 	left:5px;
+}
+td, th
+{
+	padding:10px 10px;
 }

@@ -10,6 +10,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.2/jquery.fullPage.min.css" type="text/css" rel="stylesheet"/>
 		<link href="css/style.css" type="text/css" rel="stylesheet"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="icon" type="image/png" href="img/logo.png" />
 	</head>
 	<body class="brown darken-5">
 		<main class="center browne-text no-pad-bot" id="content">
@@ -73,6 +74,7 @@
 								</div>
 							</div>
 							<div id="ground-point-breakdown" class="col s12">
+								<button class="btn waves-effect modal-open modal-trigger center brown" href="#best-points-table" id="best-points-table-trigger">Can't see full table? (Click me)</button>
 								 <table class="center">
 									<thead>
 										<tr class="center">
@@ -291,6 +293,77 @@
 				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Back to the mines!</a>
 			</div>
 		</div>
+		<div id="best-points-table" class="modal">
+			<table class="center grey darken-4 yellow-text">
+				<thead>
+					<tr class="center">
+						<th class="center" data-field="id">Name</th>
+						<th class="center" data-field="name">Description</th>
+						<th class="center" data-field="name">Affected by Market Shift</th>
+						<th class="center" data-field="price">Point Value</th>
+					</tr>
+				</thead>
+				<tbody class="center">
+					<tr class="center">
+						<td class="center">Coal</td>
+						<td class="center">Stored in sublevel one on a roof; triggered to fall in many directions.</td>
+						<td class="center green-text text-lighten-1">Yes</tdd>
+						<td class="center">5 pts / sample (Max 24)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Magnetite</td>
+						<td class="center">(Iron) Triggered to fall out of a tube on the opposite side of the coal.</td>
+						<td class="center green-text text-lighten-1">Yes</tdd>
+						<td class="center">7 pts / sample (Max 20)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Bauxite</td>
+						<td class="center">(Aluminum) Stored in sublevel two in a hard to reach crevice</td>
+						<td class="center green-text text-lighten-1">Yes</tdd>
+						<td class="center">10 pts / sample (Max 16)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Chalcopyrite</td>
+						<td class="center">(Copper) Stored in a heavy bin opposite to bauxite in sublevel two</td>
+						<td class="center green-text text-lighten-1">Yes</tdd>
+						<td class="center">15 pts / sample (Max 12)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Spodumene</td>
+						<td class="center">(Lithium) Smaller crystals can be broken off (velcro) and collected. Stored in sublevel 3 which all teams have access to.</td>
+						<td class="center green-text text-lighten-1">Yes</tdd>
+						<td class="center">25 pts / sample (Max 8)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Limestone</td>
+						<td class="center">Located along tunnel between sublevel one and two</td>
+						<td class="center red-text text-darken-2">No</tdd>
+						<td class="center">2 pts / sample (Max 5)</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Air Filter</td>
+						<td class="center">Move it from the spare parts rack to the filter area. Only one.</td>
+						<td class="center red-text text-darken-2">No</tdd>
+						<td class="center">100 pts</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Water Pipe</td>
+						<td class="center">Move it from the spare parts rack and connect broken pipes. Sublevel one and two</td>
+						<td class="center red-text text-darken-2">No</tdd>
+						<td class="center">100 pts</td>
+					</tr>
+					<tr class="center">
+						<td class="center">Core Sample</td>
+						<td class="center">Stored in sublevel three with information. Varies in size; bigger size means bigger points</td>
+						<td class="center red-text text-darken-2">No</tdd>
+						<td class="center">50 pts - 150 pts (Based on size)</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="grey darken-4 yellow-text center">
+				<a class="grey darken-4 yellow-text">We made a points calculator! It's hosted on </a><a class=" center grey darken-4" href="https://westwoodrobotics.github.io/best/2015/calculator.html">GitHub</a>
+			</div>
+		</div>
 		<div id="best-game-video" class="modal"><div class=" video-container"><div id="best-game-vid"></div></div></div>
 		<div id="music-video" class="modal"><div class=" video-container"><div id="music-vid"></div></div></div>
 		<div id="map">
@@ -303,9 +376,6 @@
 			</div>
 		</div>
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.min.js"></script>
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.2/vendors/jquery.slimscroll.min.js" async></script>!-->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.2/jquery.fullPage.min.js"></script>!-->
 	<script src="js/fullpage.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/init.js" defer></script>

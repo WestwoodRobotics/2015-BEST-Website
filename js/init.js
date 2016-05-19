@@ -69,6 +69,13 @@ $(document).ready(function()
       ready: function() {if(!$("#best-video-not-loaded").length)window.startBestGameVideo();}, // Callback for Modal open
       complete: function() {window.stopBestGameVideo();} // Callback for Modal close
     });
+	$('#best-points-table-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      ready: function() {}, // Callback for Modal open
+      complete: function() {} // Callback for Modal close
+    });
 	$('#music-video-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       in_duration: 300, // Transition in duration
@@ -84,6 +91,6 @@ $(document).ready(function()
       complete: function() {} // Callback for Modal close
     });
 	$("#ground-ul-tabs").tabs();
-	$(".slider").slider({height:350}).slider("pause");
-		$.fn.fullpage.moveTo(3,1);
+	$("#robot-progression-slider .slider").slider({height:350}).slider("pause");
+	$("#our-team-slider .slider").slider({height:350,interval:1500});
 });
