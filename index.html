@@ -24,14 +24,63 @@
 		<main class="center browne-text no-pad-bot" id="content">
 			<div class="fp-section" id="section-1">
 				<div class="background-helper valign-wrapper">
-					<div class="card grey darken-4 yellow-text hide valign animateMe">
-						<h1 id="section-1-header">What is best?</h1>
-						<img id="logo" src="img/logo.png" alt="Westwood Logo" width="150px" />
-						<img id="best-logo" src="img/best_logo.png" alt="BEST Logo" width="150px" />
-						<button class="btn waves-effect modal-trigger modal-action modal-open" href="#best-game" id="best-game-trigger">
-							A Competition
-						</button>
-						<button class="btn waves-effect modal-trigger modal-action modal-open" href="#best-game-video" id="best-game-video-trigger"></button>
+					<div class="card grey darken-4 yellow-text hide animateMe">
+						<div class="row" id="ground-topped">
+							<div class="col s12 m2"><img id="logo" src="img/logo.png" alt="Westwood Logo" width="150px" height="150px" /></div>
+							<div class="col s12 m8"><h1 id="section-1-header">What is best?</h1></div>
+							<div class="col s12 m2"><img id="best-logo" src="img/best_logo.png" alt="BEST Logo" width="150px" height="150px"/></div>
+						</div>
+						<div class="row" id="ground-tabs">
+							<div class="col s12">
+								<ul class="tabs blue-grey darken-3" id="ground-ul-tabs">
+									<li class="tab col s3"><a href="#ground-basics">BEST Basics</a></li>
+									<li class="tab col s3"><a href="#ground-theme">2015 Theme</a></li>
+									<li class="tab col s3"><a href="#ground-video">2015 Video</a></li>
+									<li class="tab col s3"><a href="#ground-point-breakdown">Point Breakdown</a></li>
+								</ul>
+							</div>
+							<div id="ground-basics" class="col s12">
+								<h3 class="center">
+									BEST Basics
+								</h3>
+								<ul class="left-align">
+									<li>BEST is a competition  that it highlights the importance of robotics, not the robot<ul>
+										<li>BEST focuses on the concept that the teams are businesses. By doing this, it teaches students the importance of <strong class="yellow-text text-darken-4">marketing</strong> skills in robotics. You might be able to build a great product, but if you can't express its functionality and how it came to be, the work won't be fruitful</li>
+											<li>BEST limits <strong class="yellow-text text-darken-4">resources</strong> we are allowed to use in the robot to emulate resource scarcity in our world. This encourages creativity and helps replicate real-world scenarios</li>
+											<li>BEST demonstrates the importance of public relations through the use of the <strong class="yellow-text text-darken-4">exhibit</strong>. The use of limited space to showcase who we are simulates limited opportunities and times which in turn highlights the importance of clear, concise information presented in a visually and mentally stimulating manner </li>
+											<li>BEST incorporates an <strong class="yellow-text text-darken-4">Engineering Notebook</strong> to emphasize the importance of documentation. Many ideas within the robotics industry are very competitive, and are protected through patents which require intricate detail to make their mark</li>
+											<li>All of the points listed above discuss <em>real world</em> challenges in the field of robotics. Most other competitions focus on building and programming a robot and forget to talk about the aspects of this ever-growing industry</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div id="ground-theme" class="col s12">
+								<h3 class="center" id="ground-theme-header">
+									<img src="img/game_logo_transparent.png" alt="Game Logo" height="110px" width="300px"/> (2015 Competition)
+								</h3>
+								<ul class="left-align">
+									<li>This year's competition is about mining
+										<ul>
+											<li>BEST robotics has chosen to invest in a mine!</li>
+											<li>Teams have to build a robot that mines for specific minerals</li>
+											<li>Alternatively, teams can choose to "improve" the mine by fixing up parts of it</li>
+										</ul>
+									</li>
+									<li>This year's competition is different from previous years in that the point values change based on how teams collect points. If more teams collect points from (for example) the coal, the value of the coal depreciates because there is a surplus and it's not necessary. The game gives teams a basic introduction to economics </li>
+								</ul>
+							</div>
+							<div id="ground-video" class="col s12 valign-wrapper">
+								<div class="valign center full-width" id="best-video-button-container">
+									<img src="img/game_logo_transparent.png" alt="Game Logo" height="250px"/>
+									<h4>Game Video</h4>
+									<button class="btn waves-effect modal-open modal-trigger center brown" href="#best-game-video" id="best-game-video-trigger">Click me!</button>
+									<p id="best-video-not-loaded">
+										We use <a href="https://developers.google.com/youtube/" target="_blank">YouTube</a> API's to control the video. Please wait until I dissapear to click the button for BEST results!
+									</p>
+								</div>
+							</div>
+							<div id="ground-point-breakdown" class="col s12">Test 4</div>
+						</div>
 						<div class="scroller fa fa-arrow-down fa-3x medium"></div>
 					</div>
 				</div>
@@ -39,10 +88,32 @@
 			<div class="fp-section" id="section-2">
 				<div class="slide" id="section-2-helper">
 					<div class="background-helper valign-wrapper">
-						<div class="card hide grey darken-4 yellow-text valign animateMe">
-							<h1>Default header</h1>
-							<section>Section 1</section>
-							<section>Section 2</section>
+						<div class="card hide grey darken-4 yellow-text animateMe">
+							<h1 class="row" id="level-1-topped">Robot Design</h1><br/>
+							<ul class="left-align" class="ul-assist">
+								<li class="li-helper">The process for designing or robot doesn't change much
+									<ul>
+										<li class="li-helper">Brainstorm</li>
+										<li class="li-helper">Prototype</li>
+										<li class="li-helper">CAD</li>
+										<li class="li-helper">Produce</li>
+										<li class="li-helper">Find flaws / why the design doesn't work</li>
+										<li class="li-helper">Repeat until done</li>
+									</ul>
+								</li>
+							</ul>
+							<div id="robot-progression-slider">
+								<div class="slider">
+									<ul class="slides">
+										<li><img src="img/version1.PNG" alt="Version 1 of our robot" /></li>
+										<li><img src="img/version2.PNG" alt="Version 2 of our robot" /></li>
+										<li><img src="img/version3.PNG" alt="Version 3 of our robot" /></li>
+										<li><img src="img/version4.PNG" alt="Version 4 of our robot" /></li>
+										<li><img src="img/version5.PNG" alt="Version 5 of our robot" /></li>
+									</ul>
+								</div>
+								<span class="center">Click a bubble to see our robot in that stage</span>
+							</div>
 							<div class="scroller fa fa-arrow-down fa-3x medium"></div>
 						</div>
 					</div>
@@ -52,9 +123,45 @@
 				<div class="slide" id="section-3">
 					<div class="background-helper valign-wrapper">
 						<div class="card hide grey darken-4 yellow-text valign animateMe">
-							<h1>Default header</h1>
-							<section>Section 1</section>
-							<section>Section 2</section>
+							<h1 class="row" id="section-3-fixed-top">Our community</h1>
+							<div class="row" id="section-3-tabs">
+								<div class="col s12">
+									<ul class="tabs blue-grey darken-3" id="section-3-ul-tabs">
+										<li class="tab col s3"><a href="#section-3-outreach">Throughout our State</a></li>
+										<li class="tab col s3"><a href="#section-3-oe">Within our Club</a></li>
+									</ul>
+								</div>
+								<div id="section-3-outreach" class="col s12">
+									<h3 class="center">
+										The Westwood RoboWarriors Outreach
+									</h3>
+									<ul class="left-align">
+										<li>Demonstrations
+											<ul>
+												<li>We were at Austin Mini Maker Faire showcasing both our BEST and FIRST robots!</li>
+												<li>We worked with BEST to serve as the <em>only local team</em> who maintained the BEST booth at the Freescale Tech Forum this year</li>
+												<li>We reached out to many of the elementary and middle schools in our district to give demonstrations to the students about the importance of STEM education and to clear misconceptions about it.</li>
+											</ul>
+										</li>
+										<li>Volunteering
+											<ul>
+												<li>Every year we host a summer camp (in the summer) to enlighten young students about the entertainment and importance brought by STEM education</li>
+												<li>Every year we host the Junior FLL competition</li>
+												<li>This year, we are hosting the BEST regional competition</li>
+											</ul>
+										</li>
+										<li>We have many local, Austin area sponsors!</li>
+									</ul>
+								</div>
+								<div id="section-3-oe" class="col s12">
+									<h3 class="center" id="section-3-oe-header">
+										The Westwood RoboWarrior Community
+									</h3>
+									<ul class="left-align">
+
+									</ul>
+								</div>
+							</div>
 							<div class="scroller fa fa-arrow-right fa-3x medium"></div>
 						</div>
 					</div>
@@ -73,12 +180,18 @@
 		<div id="sitemap" class="modal">
 			<div class="modal-content">
 				<h4 class="center">The Miner's Guide (SiteMap)</h4>
+				Links don't work right now. Sorry :(
 				<ul>
-					<li><a href="#">NO!</a></li>
-					<li><a href="#">NO!</a></li>
-					<li><a href="#">NO!</a></li>
-					<li><a href="#">NO!</a></li>
-					<li><a href="#">NO!</a></li>
+					<li><a href="#">What is BEST</a></li>
+					<li><a href="#">This year's competition</a></li>
+					<li><a href="#">This year's video</a></li>
+					<li><a href="#">Breakdown of points</a></li>
+					<li><a href="#">Robot Design Process</a></li>
+					<li><a href="#">Robot Pictures</a></li>
+					<li><a href="#">Community Outreach</a></li>
+					<li><a href="#">Westood RoboWarrior Community</a></li>
+					<li><a href="#">General Pictures!</a></li>
+					<li><a href="#">Daft Punk - Technologic - Our SPIRIT DANCE!</a></li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -86,18 +199,6 @@
 			</div>
 		</div>
 		<div id="best-game-video" class="modal"><div class=" video-container"><div id="best-game-vid"></div></div></div>
-		<div id="best-game" class="modal valign-wrapper">
-			<h1 class="center">
-				BEST Basics
-			</h1>
-			<ul class="valign center">
-				<li>BEST isn't like the <em>other</em> robotics competitions out there. To start, it's <em>the</em> BEST competition!!! <br /> 
-					But the bigger part is that it highlights the importance of robotics, not the robot.<ul>
-						<li>BEST focuses on the concept that the teams are <em>businesses</em>. By doing this, it teaches students the importance of <strong>marketing</strong> skills in robotics. You might be able to build a great product, but if you can't express its functionality and how it came to be, the work won't be fruitful</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
 		<div id="map">
 			<div class="map-section sublevel-0 white-text center valign-wrapper"><div class="valign center align-center text">Ground Level</div></div>
 			<div class="map-section sublevel-1 white-text center valign-wrapper"><div class="valign center align-center text">Sublevel One</div></div>
@@ -115,9 +216,10 @@
 	<script src="js/materialize.js"></script>
 	<script src="js/init.js" defer></script>
 	<script type="text/javascript">
+		window.ytInterval = setInterval(function(){if($("#best-game-vid").prop("tagName") === "IFRAME"){clearInterval(window.ytInterval); setTimeout(function(){$("#best-video-not-loaded").remove();},1500)}},500);
 		var firstScriptTag = document.getElementsByTagName('script')[0];
 		var tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/iframe_api";
+		//tag.src = "https://www.youtube.com/iframe_api";
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 		var bestGamePlayer;
 		function onYouTubeIframeAPIReady() 
