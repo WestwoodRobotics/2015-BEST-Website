@@ -20,12 +20,14 @@ $(document).ready(function()
 		{
 			$("#map .map-section").removeClass("active");
 			$("#map .sublevel-"+(b-1)).addClass("active");
+			
 			$("#section-"+b).find(".animateMe").removeClass("hide");
 			$("#section-"+b).find(".animateMe").removeClass("animated fadeOut card-animation").addClass("animated card-animation fadeIn");
 		},
 		afterSlideLoad: function(a,b,c,d)
 		{
 			$("#map .map-section").removeClass("active");
+			
 			$("#section-3").find(".animateMe").removeClass("hide");
 			$("#section-4").find(".animateMe").removeClass("hide");
 			if(c === 0)
@@ -33,7 +35,7 @@ $(document).ready(function()
 				$("#section-3").find(".animateMe").removeClass("animated fadeOut card-animation").addClass("animated card-animation fadeIn");
 				$("#map .sublevel-2").addClass("active");
 			}
-			else
+			else 
 			{
 				$("#section-4").find(".animateMe").removeClass("animaed fadeOut card-animation").addClass("animated card-animation fadeIn");
 				$("#map .sublevel-3").addClass("active");
@@ -59,12 +61,20 @@ $(document).ready(function()
       ready: function() {$("#toast-container").hide();}, // Callback for Modal open
       complete: function() {$("#toast-container").show();} // Callback for Modal close
     });
+	
 	$('#best-game-video-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       in_duration: 300, // Transition in duration
       out_duration: 200, // Transition out duration
       ready: function() {if(!$("#best-video-not-loaded").length)window.startBestGameVideo();}, // Callback for Modal open
       complete: function() {window.stopBestGameVideo();} // Callback for Modal close
+    });
+	$('#music-video-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      ready: function() {if(!$("#music-video-not-loaded").length)window.startMusicVideo();}, // Callback for Modal open
+      complete: function() {window.stopMusicVideo();} // Callback for Modal close
     });
 	$('#best-game-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -75,4 +85,5 @@ $(document).ready(function()
     });
 	$("#ground-ul-tabs").tabs();
 	$(".slider").slider({height:350}).slider("pause");
+		$.fn.fullpage.moveTo(3,1);
 });

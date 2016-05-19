@@ -12,15 +12,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
 	<body class="brown darken-5">
-		<!--<header>
-			<nav class="brown darken-3" role="navigation">
-				<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-					<ul class="right hide-on-med-and-down"><li><a href="#">Navbar Link</a></li></ul>
-					<ul id="nav-mobile" class="side-nav"><li><a href="#">Navbar Link</a></li></ul>
-					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-				</div>
-			</nav>
-		</header>!-->
 		<main class="center browne-text no-pad-bot" id="content">
 			<div class="fp-section" id="section-1">
 				<div class="background-helper valign-wrapper">
@@ -64,6 +55,8 @@
 											<li>BEST robotics has chosen to invest in a mine!</li>
 											<li>Teams have to build a robot that mines for specific minerals</li>
 											<li>Alternatively, teams can choose to "improve" the mine by fixing up parts of it</li>
+											<li>As you go further into the field, it gets harder to move around, as there is more constricted space</li>
+											<li>Items further from the field have higher point values before market shifts</li>
 										</ul>
 									</li>
 									<li>This year's competition is different from previous years in that the point values change based on how teams collect points. If more teams collect points from (for example) the coal, the value of the coal depreciates because there is a surplus and it's not necessary. The game gives teams a basic introduction to economics </li>
@@ -79,7 +72,75 @@
 									</p>
 								</div>
 							</div>
-							<div id="ground-point-breakdown" class="col s12">Test 4</div>
+							<div id="ground-point-breakdown" class="col s12">
+								 <table class="center">
+									<thead>
+										<tr class="center">
+											<th class="center" data-field="id">Name</th>
+											<th class="center" data-field="name">Description</th>
+											<th class="center" data-field="name">Affected by Market Shift</th>
+											<th class="center" data-field="price">Point Value</th>
+										</tr>
+									</thead>
+									<tbody class="center">
+										<tr class="center">
+											<td class="center">Coal</td>
+											<td class="center">Stored in sublevel one on a roof; triggered to fall in many directions.</td>
+											<td class="center green-text text-lighten-1">Yes</tdd>
+											<td class="center">5 pts / sample (Max 24)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Magnetite</td>
+											<td class="center">(Iron) Triggered to fall out of a tube on the opposite side of the coal.</td>
+											<td class="center green-text text-lighten-1">Yes</tdd>
+											<td class="center">7 pts / sample (Max 20)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Bauxite</td>
+											<td class="center">(Aluminum) Stored in sublevel two in a hard to reach crevice</td>
+											<td class="center green-text text-lighten-1">Yes</tdd>
+											<td class="center">10 pts / sample (Max 16)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Chalcopyrite</td>
+											<td class="center">(Copper) Stored in a heavy bin opposite to bauxite in sublevel two</td>
+											<td class="center green-text text-lighten-1">Yes</tdd>
+											<td class="center">15 pts / sample (Max 12)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Spodumene</td>
+											<td class="center">(Lithium) Smaller crystals can be broken off (velcro) and collected. Stored in sublevel 3 which all teams have access to.</td>
+											<td class="center green-text text-lighten-1">Yes</tdd>
+											<td class="center">25 pts / sample (Max 8)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Limestone</td>
+											<td class="center">Located along tunnel between sublevel one and two</td>
+											<td class="center red-text text-darken-2">No</tdd>
+											<td class="center">2 pts / sample (Max 5)</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Air Filter</td>
+											<td class="center">Move it from the spare parts rack to the filter area. Only one.</td>
+											<td class="center red-text text-darken-2">No</tdd>
+											<td class="center">100 pts</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Water Pipe</td>
+											<td class="center">Move it from the spare parts rack and connect broken pipes. Sublevel one and two</td>
+											<td class="center red-text text-darken-2">No</tdd>
+											<td class="center">100 pts</td>
+										</tr>
+										<tr class="center">
+											<td class="center">Core Sample</td>
+											<td class="center">Stored in sublevel three with information. Varies in size; bigger size means bigger points</td>
+											<td class="center red-text text-darken-2">No</tdd>
+											<td class="center">50 pts - 150 pts (Based on size)</td>
+										</tr>
+									</tbody>
+								</table>
+								<p id="external-calculator"><a href="https://westwoodrobotics.github.io/best/2015/calculator.html" class="left-align" target="_blank"><em>Points Calculator (made by us) on GitHub</em></a> <- Click to view</p>
+							</div>
 						</div>
 						<div class="scroller fa fa-arrow-down fa-3x medium"></div>
 					</div>
@@ -158,7 +219,23 @@
 										The Westwood RoboWarrior Community
 									</h3>
 									<ul class="left-align">
-
+										<li>Operation Educate
+											<ul>
+												<li>Every Saturday, we host an educational session for students in Westwood High School using curriculum created by Westwood RoboWarriors.</li>
+												<li>We have three main categories: Programming, CAD and Theoretical / Applied Mathematics</li>
+												<li>Experienced members (Juniors and Seniors) teach newer members (Freshmen and Sophomores)</li>
+											</ul>
+										</li>
+										<li>Student / Non-Student relations
+											<ul>
+												<li>Every single thing that is produced by the RoboWarriors was created by students. We pride ourselves on student led creation and organization; our entire entity is run by students, from logistics to creation, with guiding mentors and sponsors to ensure safe design and impart new ideas upon us.</li>
+											</ul>
+										</li>
+										<li>Team-Bonding events
+											<ul>
+												Just like businesses, we like to keep relations between members positive. Therefore, we have meetings almost every day with a variety of different tasks allocated to our diverse set of members. However, we also have bonding events, with our most recent being in the summer: a pool party at our vice-president's house! Our next tentative bonding event is October 31 (Haloween!) where we will have a spooky party.
+											</ul>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -169,9 +246,25 @@
 				<div class="slide" id="section-4">
 					<div class="background-helper valign-wrapper">
 						<div class="card hide grey darken-4 yellow-text valign animateMe">
-							<h1>Default header</h1>
-							<section>Section 1</section>
-							<section>Section 2</section>
+							<h1 id="section-4-topper">WE ARE THE ROBOWARRIORS!</h1>
+							We're going to dance to Technologic this weekend!
+							<p><button class="btn waves-effect modal-open modal-trigger center brown" href="#music-video" id="music-video-trigger">Choreography (First 30 seconds of video)</button></p>
+							<p class="center">Through thick and thin, we're all in this together!</p>
+							<p id="music-video-not-loaded">
+								We use <a href="https://developers.google.com/youtube/" target="_blank">YouTube</a> API's to control the video. Please wait until I dissapear to click the button for BEST results!
+							</p>
+							<div id="our-team-slider">
+								<div class="slider">
+									<ul class="slides">
+										<li><img src="img/version1.PNG" alt="Version 1 of our robot" /></li>
+										<li><img src="img/version2.PNG" alt="Version 2 of our robot" /></li>
+										<li><img src="img/version3.PNG" alt="Version 3 of our robot" /></li>
+										<li><img src="img/version4.PNG" alt="Version 4 of our robot" /></li>
+										<li><img src="img/version5.PNG" alt="Version 5 of our robot" /></li>
+									</ul>
+								</div>
+								<span class="center">Click a bubble to see a picture of the RoboWarriors</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -199,6 +292,7 @@
 			</div>
 		</div>
 		<div id="best-game-video" class="modal"><div class=" video-container"><div id="best-game-vid"></div></div></div>
+		<div id="music-video" class="modal"><div class=" video-container"><div id="music-vid"></div></div></div>
 		<div id="map">
 			<div class="map-section sublevel-0 white-text center valign-wrapper"><div class="valign center align-center text">Ground Level</div></div>
 			<div class="map-section sublevel-1 white-text center valign-wrapper"><div class="valign center align-center text">Sublevel One</div></div>
@@ -216,10 +310,10 @@
 	<script src="js/materialize.js"></script>
 	<script src="js/init.js" defer></script>
 	<script type="text/javascript">
-		window.ytInterval = setInterval(function(){if($("#best-game-vid").prop("tagName") === "IFRAME"){clearInterval(window.ytInterval); setTimeout(function(){$("#best-video-not-loaded").remove();},1500)}},500);
+		window.ytInterval = setInterval(function(){if($("#best-game-vid").prop("tagName") === "IFRAME"){clearInterval(window.ytInterval); setTimeout(function(){$("#best-video-not-loaded").remove();$("#music-video-not-loaded").remove();},1500)}},500);
 		var firstScriptTag = document.getElementsByTagName('script')[0];
 		var tag = document.createElement('script');
-		//tag.src = "https://www.youtube.com/iframe_api";
+		tag.src = "https://www.youtube.com/iframe_api";
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 		var bestGamePlayer;
 		function onYouTubeIframeAPIReady() 
@@ -229,9 +323,17 @@
 			width: '480',
 			videoId: '69P3Ux3aitM',
 			});
+			
+			musicVideoPlayer = new YT.Player('music-vid', {
+			height: '853',
+			width: '480',
+			videoId: 'c2D87fVpsqU',
+			});
 		}
 		function stopBestGameVideo() {bestGamePlayer.pauseVideo();}
 		function startBestGameVideo() {bestGamePlayer.playVideo();}
+		function stopMusicVideo() {musicVideoPlayer.pauseVideo();}
+		function startMusicVideo() {musicVideoPlayer.playVideo();}
 	</script>
 </body>
 </html>
